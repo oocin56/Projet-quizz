@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Planifiez votre voyage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background"></div>
+        <div class="container">
+            <div class="info">
+                <div class="section name">Informations Personnelles</div>
+                <div class="ligne perso">
+                    <input class="" type="text" placeholder="Prénom">
+                    <input type="text" placeholder="Nom">
+                </div>
+                <div class="ligne perso">
+                    <input type="email" placeholder="Email">
+                    <input type="text" placeholder="Code Promo">
+                </div>
+
+                <div class="section voyage">Le Voyage</div>
+                <label for="description">Décrivez votre voyage de rêve :</label>
+                <textarea id="description"  rows="6" ></textarea>
+
+                <div class="ligne pays">
+                    <label for="select">Sélectionnez une région du Monde :</label>
+                    <select id="select" class="select">
+                        <option value="">...</option>
+                        <option value="europe">Europe</option>
+                        <option value="asie">Asie</option>
+                        <option value="afrique">Afrique</option>
+                        <option value="an">Amérique du nord</option>
+                        <option value="as">Amérique du sud</option>
+                    </select>
+                </div>
+
+
+                <div class="ligne">
+                    <div style="display: flex;flex-direction: column; align-items: center;">
+                        <label class="date" for="days">Combien de jours durera votre voyage ?</label>
+                        <input class="inpt-number" type="number" id="days"  min="1" max="20">
+                    </div>
+                    <div style="display: flex;flex-direction: column; align-items: center;">
+                        <label class="date" for="start-date">Sélectionnez votre date de départ :</label>
+                        <input class="inpt-number" type="date" id="start-date" >
+                    </div>
+                </div>
+
+                <div class="ligne activités">
+                    <div class="checkbox-group">
+                        <label>Quelles activités souhaitez-vous inclure dans votre voyage ?</label>
+
+                        <div class="grid-container">
+                            <div class="grid">
+                                <input class="box" type="checkbox" id="Randonnée">
+                                <label class="checkbox" for="Randonnée"></label>
+                                <label class="box-section" for="Randonnée">Randonnée</label>
+                            </div>
+                            <div class="grid">
+                                <input class="box" type="checkbox" id="Plongée">
+                                <label class="checkbox" for="Plongée"></label>
+                                <label class="box-section" for="Plongée">Plongée</label>
+                            </div>
+                            <div class="grid">
+                                <input class="box" type="checkbox" id="visit">
+                                <label class="checkbox" for="visit"></label>
+                                <label class="box-section" for="visit">Visit</label>
+                            </div>
+                            <div class="grid">
+                                <input class="box" type="checkbox" id="Gastronomie">
+                                <label class="checkbox" for="Gastronomie"></label>
+                                <label class="box-section" for="Gastronomie">Gastronomie</label>
+                            </div>
+                            <div class="grid">
+                                <input class="box" type="checkbox" id="massage">
+                                <label class="checkbox" for="massage"></label>
+                                <label class="box-section" for="massage">Massage</label>
+                            </div>
+                            <div class="grid">
+                                <input class="box" type="checkbox" id="cuisine">
+                                <label class="checkbox" for="cuisine"></label>
+                                <label class="box-section" for="cuisne">Cuisine</label>
+                            </div>
+                            <div class="grid">
+                                <input class="box" type="checkbox" id="Golf" >
+                                <label class="checkbox" for="Golf"></label>
+                                <label class="box-section" for="Golf">Golf</label>
+                            </div>
+                            <div class="grid">
+                                <input class="box" type="checkbox" id="Croisières">
+                                <label class="checkbox" for="Croisières"></label>
+                                <label class="box-section" for="Croisières">Croisières</label>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="ligne place">
+                    <div class="radio-group">
+                        <label>Quel type de logement préférez-vous ?</label>
+                        <div>
+                            <div class="radio">
+                                <input class="box-radio" type="radio" name="logement" id="hotel">
+                                <label class="checkbox" for="hotel"></label>
+                                <label class="box-section" for="hotel">Hotel</label>
+                            </div>
+                            <div class="radio">
+                                <input class="box-radio" type="radio" name="logement" id="auberge">
+                                <label class="checkbox" for="auberge"></label>
+                                <label class="box-section" for="auberge">Auberge</label>
+                            </div>
+                            <div class="radio"> 
+                                <input class="box-radio" type="radio" name="logement" id="camping">
+                                <label class="checkbox" for="camping"></label>
+                                <label class="box-section" for="camping">Camping</label>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="ligne budget">
+                    <label for="budget">Quel est votre budget pour ce voyage ?</label>
+                    <input type="range" class="range-slider" range="50">
+                </div>
+
+                <div class="ligne assurance">
+                    <label style="font-size: 25px;font-weight: bold;">Voulez-vous inclure une assurance voyage ?</label>
+                    <div class="assurance-container">
+                        <div class="assurance-opt">
+                            <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                                <div style="display: flex;">
+                                    <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                    </label>
+                                </div>
+                                <div style="padding: 10px;"><span class="assurance-title">Assurance Voyage :</span> <a>Couverture médicale et assistance 24/7</a></div>
+                            </div>
+                        </div>
+                        <div class="assurance-opt">
+                            <div style="display: flex; align-items: center;">
+                                <div style="display: flex;">
+                                    <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                    </label>
+                                </div>
+                                <div style="padding: 10px;"><span class="assurance-title">Protection Bagages :</span> <a>perte, vol, ou dommage des bagages</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                
+
+                
+                <div class="ligne submit">
+                    <button class="submit-button">SUBMIT</button>
+                </div>
+                
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+        </div>
+    
+</body>
+</html>
